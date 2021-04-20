@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    public class Calculator
+    public class Calculators
     {
         public static int Add(int x, int y)
         {
