@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Calculator;
+using CalculatorLib;
 
 namespace CalculatorTest
 {
@@ -8,31 +8,31 @@ namespace CalculatorTest
         [Test]
         public void Add()
         {
-            var result = Calculators.Add(1, 2);
+            var result = StaticCalculatorTest.Add(1, 2);
             Assert.AreEqual(3, result);
         }
         [Test]
         public void Subtract()
         {
-            var result = Calculators.Subtract(2, 1);
+            var result = StaticCalculatorTest.Subtract(2, 1);
             Assert.AreEqual(1, result);
         }
         [Test]
         public void Multiply()
         {
-            var result = Calculators.Multiply(1, 2);
+            var result = StaticCalculatorTest.Multiply(1, 2);
             Assert.AreEqual(2, result);
         }
         [Test]
         public void Divide()
         {
-            var result = Calculators.Divide(2, 2);
+            var result = StaticCalculatorTest.Divide(2, 2);
             Assert.AreEqual(1, result);
         }
         [Test]
         public void Modulus()
         {
-            var result = Calculators.Modulus(10, 3);
+            var result = StaticCalculatorTest.Modulus(10, 3);
             Assert.AreEqual(1, result);
         }
     }

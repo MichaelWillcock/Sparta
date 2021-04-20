@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Calculator
+namespace CalculatorLib
 {
-    public class Calculators
+    public class StaticCalculatorTest
     {
         public static int Add(int x, int y)
         {

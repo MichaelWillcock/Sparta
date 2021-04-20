@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Calculator;
+using CalculatorLib;
 
 namespace ModulusEdgeCaseTest
 {
@@ -8,7 +8,7 @@ namespace ModulusEdgeCaseTest
         [Test]
         public void NegativeModulus()
         {
-            var result = Calculators.Modulus(-16, 3);
+            var result = StaticCalculatorTest.Modulus(-16, 3);
             Assert.AreEqual(-1, result);
         }
     }

@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Calculator;
+using CalculatorLib;
 
 namespace MultiplicationEdgeCaseTest
 {
@@ -8,28 +8,28 @@ namespace MultiplicationEdgeCaseTest
         [TestCase(5, 5, 25)]
         public void SquareMultiply(int x, int y, int expected)
         {
-            var result = Calculators.Multiply(x, y);
+            var result = StaticCalculatorTest.Multiply(x, y);
 
             Assert.AreEqual(expected, result);
         }
         [TestCase(-5, 5, -25)]
         public void PositiveToNegativeMultiply(int x, int y, int expected)
         {
-            var result = Calculators.Multiply(x, y);
+            var result = StaticCalculatorTest.Multiply(x, y);
 
             Assert.AreEqual(expected, result);
         }
         [TestCase(-5, -5, 25)]
         public void NegativeToNegativeMultiply(int x, int y, int expected)
         {
-            var result = Calculators.Multiply(x, y);
+            var result = StaticCalculatorTest.Multiply(x, y);
 
             Assert.AreEqual(expected, result);
         }
         [TestCase(5, 0, 0)]
         public void ZeroCaseTest(int x, int y, int expected)
         {
-            var result = Calculators.Multiply(x, y);
+            var result = StaticCalculatorTest.Multiply(x, y);
 
             Assert.AreEqual(expected, result);
         }
@@ -37,7 +37,7 @@ namespace MultiplicationEdgeCaseTest
         //results in failure as it should
         public void ExceedMultilpication(int x, int y, int expected)
         {
-            var result = Calculators.Multiply(x, y);
+            var result = StaticCalculatorTest.Multiply(x, y);
 
             Assert.AreEqual(expected, result);
         }
