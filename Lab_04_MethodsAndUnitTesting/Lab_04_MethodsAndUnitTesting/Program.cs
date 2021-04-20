@@ -48,6 +48,7 @@ namespace Lab_04_MethodsAndUnitTesting
             //Console.WriteLine(Add(4, 5, 6));
             //Method overloading automatically selects the right method based on the number of input parameters.
 
+            Console.WriteLine(TripleCalc(1, 2, 3, out int sum));
             Console.WriteLine(TripleCalc(1, 2, 3));
         }
 
