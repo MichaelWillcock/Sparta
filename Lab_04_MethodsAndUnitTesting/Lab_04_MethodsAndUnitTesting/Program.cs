@@ -4,7 +4,7 @@ namespace Lab_04_MethodsAndUnitTesting
 {
     public class Methods
     {
-        static void Main()
+        public static void Main()
         {
             //DoThis1();
 
@@ -97,7 +97,7 @@ namespace Lab_04_MethodsAndUnitTesting
             Console.WriteLine(y);
             return x * x;
         }
-        static void OrderPizza(bool anchovies, bool pineapple, bool mushrooms = false)
+        public static void OrderPizza(bool anchovies, bool pineapple, bool mushrooms = false)
         {
             if (anchovies = true && pineapple == true && mushrooms == true)
             {
@@ -130,21 +130,6 @@ namespace Lab_04_MethodsAndUnitTesting
             z = (x > 10);
             return x * x;
         }
-        //static int Add(int number1, int number2)
-        //{
-        //    return number1 + number2;
-        //}
-        //static int Subtract(int number1, int number2)
-        //{
-        //    return number1 - number2;
-        //}
-        //static int Multiply(int number1, int number2)
-        //{
-        //    return number1 * number2;
-        //}
-        //static double Add(double number1, double number2)
-        //{
-        //    return number1 / number2;
-        //}
+        
     }
 }

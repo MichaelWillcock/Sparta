@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Lab_04_MethodsAndUnitTesting;
 
 namespace Lab_04_UnitTests_Tests
 {
@@ -10,9 +11,10 @@ namespace Lab_04_UnitTests_Tests
         }
 
         [Test]
-        public void Test1()
+        public void ProductIsCorrect(int a, int b, int c, int expected)
         {
-            Assert.Pass();
+            var result = Methods.TripleCalc(a, b, c, out int sum);
+            Assert.Equals(result, sum);
         }
     }
 }
