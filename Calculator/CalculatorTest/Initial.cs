@@ -5,11 +5,6 @@ namespace CalculatorTest
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void Add()
         {
@@ -32,6 +27,12 @@ namespace CalculatorTest
         public void Divide()
         {
             var result = Calculators.Divide(2, 2);
+            Assert.AreEqual(1, result);
+        }
+        [Test]
+        public void Modulus()
+        {
+            var result = Calculators.Modulus(10, 3);
             Assert.AreEqual(1, result);
         }
     }
