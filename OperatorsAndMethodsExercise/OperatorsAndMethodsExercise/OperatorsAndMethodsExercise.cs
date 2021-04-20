@@ -28,7 +28,7 @@ namespace OperatorAndMethodsExercisesLib
         // Return a double rounded to 3 decimal places.
         public static double BODMAS(double inputNumber)
         {
-            return Math.Round((((Math.Pow(inputNumber, 2)) + 101) / 7) - 4);
+            return Math.Round(((((Math.Pow(inputNumber, 2)) + 101) / 7) - 4), 3);
         }
 
         // implement this method so that it returns the sum of x and y
