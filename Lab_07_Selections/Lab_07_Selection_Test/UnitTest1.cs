@@ -33,13 +33,6 @@ namespace Selection_Tests
             var result = Program.Grade(mark);
             Assert.AreEqual(expectedGrade, result);
         }
-        [TestCase(-1)]
-        [TestCase(101)]
-        public void NegativeMark(int mark, string expectedGrade)
-        {
-            Assert.Throws<Exception>(() => Program.Grade(mark));
-        }
-
         [TestCase(40, "Pass")]
         [TestCase(60, "Pass")]
         [TestCase(35, "Fail")]

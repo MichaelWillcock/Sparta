@@ -64,7 +64,7 @@ namespace Lab_05_StringsAndArrays
             //double score = 0.5;
             //string fullName = fName + " " + lName + " Score: " + score;
             //string string2 = $"{fName} {lName} Score: {score}";
-            //string string3 = $"{fName} {lName} Score: {score:p2}";
+            //string string3 = $"{fName} {lName} Score: {score:p1}";
             //string string4 = $"{fName} {lName} Score: {score:f4}";
             //Console.WriteLine(fullName);
             //Console.WriteLine(string2);
@@ -98,13 +98,13 @@ namespace Lab_05_StringsAndArrays
             //sb.AppendLine("Hope you're enjoying your training");
             //Console.WriteLine(sb);
 
-            var sb2 = new StringBuilder();
-            sb2.AppendLine("Nish");
-            Console.WriteLine(sb2);
-            sb2.Replace('i', 'a');
-            Console.WriteLine(sb2);
-            sb2.Remove(0, 3);
-            Console.WriteLine(sb2);
+            //var sb2 = new StringBuilder();
+            //sb2.AppendLine("Nish");
+            //Console.WriteLine(sb2);
+            //sb2.Replace('i', 'a');
+            //Console.WriteLine(sb2);
+            //sb2.Remove(0, 3);
+            //Console.WriteLine(sb2);
 
 
         }
