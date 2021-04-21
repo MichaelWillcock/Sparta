@@ -23,8 +23,14 @@ namespace SumOfDigits
 			132189-- > 1 + 3 + 2 + 1 + 8 + 9 = 24-- > 2 + 4 = 6
 			493193-- > 4 + 9 + 3 + 1 + 9 + 3 = 29-- > 2 + 9 = 11-- > 1 + 1 = 2 
 			*/
+			long x = 0;
+			string number = input.ToString();
+			foreach (char digit in number)
+            {
+				x += digit;
+            }
 
-			return -1;
+			return x;
 
 
 		}
