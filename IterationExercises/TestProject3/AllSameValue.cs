@@ -15,38 +15,41 @@ namespace IterationTests
          * You will find one of the loops will not not be suitable in all cases.  Which is it? 
          * You don't need to find a devious way to make it pass - just note that it is not a suitable for this problem.
          **/
+        //all tests run for listed unit tests, likely to be foreach? if worded incorrectly as would expect a listed
+        //value and recieve none? unsure. All loops work for single unit arrays and single unit arrays where the
+        //value is zero. All negative numbers all pass, one negative number also passes.
 
 
         [Test]
         public void HighestWhileLoopTest()
         {
-            int[] nums = { 5, 5, 5, 5, 5 };
+            int[] nums = { 1, 3 };
             var result = Highest.HighestWhileLoop(nums);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(-5, result);
         }
 
         [Test]
         public void HighestForLoopTest()
         {
-            int[] nums = { 5, 5, 5, 5, 5 };
+            int[] nums = { 1, 3 };
             var result = Highest.HighestForLoop(nums);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(-5, result);
         }
 
         [Test]
         public void HighestForEachLoopTest()
         {
-            int[] nums = { 5, 5, 5, 5, 5 };
+            int[] nums = { -5 };
             var result = Highest.HighestForEachLoop(nums);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(-5, result);
         }
 
         [Test]
         public void HighestDoWhileLoopTest()
         {
-            int[] nums = { 5, 5, 5, 5, 5 };
+            int[] nums = { -5 };
             var result = Highest.HighestDoWhileLoop(nums);
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(-5, result);
         }
     }
 }
