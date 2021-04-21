@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CalculatorLib;
+using System;
 
 namespace MultiplicationEdgeCaseTest
 {
@@ -37,9 +38,7 @@ namespace MultiplicationEdgeCaseTest
         //results in failure as it should
         public void ExceedMultilpication(int x, int y, int expected)
         {
-            var result = StaticCalculatorTest.Multiply(x, y);
-
-            Assert.AreEqual(expected, result);
+            Assert.Throws<OverflowException>(() => StaticCalculatorTest.Multiply(x, y));
         }
     }
 }

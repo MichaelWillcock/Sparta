@@ -14,7 +14,7 @@ namespace CalculatorLib
         }
         public static int Multiply(int x, int y)
         {
-            return x * y;
+            return checked(x * y);
         }
         public static int Divide(int x, int y)
         {

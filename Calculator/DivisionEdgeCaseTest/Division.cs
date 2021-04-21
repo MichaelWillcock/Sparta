@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CalculatorLib;
+using System;
 
 namespace DivisionEdgeCaseTest
 {
@@ -11,12 +12,12 @@ namespace DivisionEdgeCaseTest
             var result = StaticCalculatorTest.Divide(x, y);
             Assert.AreEqual(expected, result);
         }
-        [TestCase(7, 0, 0)]
+        [TestCase(1, 0)]
         //results in failure as it should
-        public void DivideByZero(int x, int y, int expected)
+        public void DivideByZero(int x, int y)
         {
-            var result = StaticCalculatorTest.Divide(x, y);
-            Assert.AreEqual(expected, result);
+            
+            Assert.Throws<DivideByZeroException>(() => StaticCalculatorTest.Divide(x, y));
         }
         [TestCase(10, -2, -5)]
         public void DivideNegativeAndPositive(int x, int y, int expected)
