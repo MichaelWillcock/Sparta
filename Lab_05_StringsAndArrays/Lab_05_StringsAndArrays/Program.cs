@@ -106,6 +106,12 @@ namespace Lab_05_StringsAndArrays
             //sb2.Remove(0, 3);
             //Console.WriteLine(sb2);
 
+            Console.WriteLine(RemoveLastExclamationMark("Hi!"));
+            Console.WriteLine(RemoveLastExclamationMark("Hi!"));
+            Console.WriteLine(RemoveLastExclamationMark("Hi!"));
+            Console.WriteLine(RemoveLastExclamationMark("Hi!"));
+            Console.WriteLine(RemoveLastExclamationMark("Hi!"));
+
 
         }
         //public static int ArraySum(int[] practiceArray)
@@ -117,5 +123,21 @@ namespace Lab_05_StringsAndArrays
         //    }
         //    return arraySum;
         //}
+        public static string RemoveLastExclamationMark(string input)
+        {
+            string finalString = input;
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                if (!(input[i].Equals('!')))
+                {
+                    break;
+                }
+                else
+                {
+                    finalString = input.Substring(0, input.Length - 2);
+                }
+            }
+            return finalString;
+        }
     }
 }
