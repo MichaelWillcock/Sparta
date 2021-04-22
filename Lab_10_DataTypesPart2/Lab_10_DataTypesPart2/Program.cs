@@ -116,6 +116,18 @@ namespace Lab_10_DataTypesPart2
             //var result = dice1 + dice2 + dice3;
             //Console.WriteLine(result);
 
+            //var date = DateTime.Today;
+            //var birthDate = new DateTime(1989, 11, 02);
+            //var age = date - birthDate;
+            //Console.WriteLine(age / 365.25);
+
+            var date = new DateTime(2020, 5, 27);
+            var birthDate = new DateTime(1992, 8, 21);
+
+            var age = date - birthDate;
+            int ageSeconds = (int)age.TotalSeconds;
+            int ageYears = ageSeconds / 31557600;
+            Console.WriteLine(ageYears);
         }
 
         public enum Suit
