@@ -24,7 +24,7 @@ namespace ArraysAndStringsLib
             bool convert = Double.TryParse(numString, out double result);
             if (convert)
             {
-                return Double.Parse(numString);
+                return result;
             }
             else
             {
