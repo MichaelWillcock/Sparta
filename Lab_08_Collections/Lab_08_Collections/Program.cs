@@ -80,40 +80,40 @@ namespace Lab_08_Collections
             //}
 
             ////DICTIONARIES
-            Dictionary<int, string> trainers = new Dictionary<int, string>();
-            trainers.Add(1, "Cathy");
-            trainers.Add(2, "David");
-            trainers.Add(3, "Paula");
-            trainers.TryAdd(3, "Manish");
+            //Dictionary<int, string> trainers = new Dictionary<int, string>();
+            //trainers.Add(1, "Cathy");
+            //trainers.Add(2, "David");
+            //trainers.Add(3, "Paula");
+            //trainers.TryAdd(3, "Manish");
 
-            var trainees = new Dictionary<int, string> { { 1, "Bongani" }, { 2, "Uzair" } };
-            var trainees2 = new Dictionary<int, string> { [1] = "Bongani", [2] = "Uzair" };
+            //var trainees = new Dictionary<int, string> { { 1, "Bongani" }, { 2, "Uzair" } };
+            //var trainees2 = new Dictionary<int, string> { [1] = "Bongani", [2] = "Uzair" };
 
-            foreach (var item in trainees)
-            {
-                Console.WriteLine(item.Key + " " + item.Value + " " + item);
-            }
+            //foreach (var item in trainees)
+            //{
+            //    Console.WriteLine(item.Key + " " + item.Value + " " + item);
+            //}
 
-            string input = "Hello World";
-            input = input.Trim().ToLower();
+            //string input = "Hello World";
+            //input = input.Trim().ToLower();
 
-            var count = new Dictionary<char, int>();
+            //var count = new Dictionary<char, int>();
 
-            foreach (var c in input)
-            {
-                if (count.ContainsKey(c))
-                {
-                    count[c]++;
-                }
-                else
-                {
-                    count.Add(c, 1);
-                }
-            }
-            foreach (var item in count)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var c in input)
+            //{
+            //    if (count.ContainsKey(c))
+            //    {
+            //        count[c]++;
+            //    }
+            //    else
+            //    {
+            //        count.Add(c, 1);
+            //    }
+            //}
+            //foreach (var item in count)
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
     }
 }
