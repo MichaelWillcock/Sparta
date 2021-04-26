@@ -6,20 +6,20 @@ namespace SafariParkApplication
     {
         static void Main(string[] args)
         {
-            Person cathy = new Person("Cathy", "French");
-            Console.WriteLine(cathy.GetFullName());
+            //Person cathy = new Person("Cathy", "French");
+            //Console.WriteLine(cathy.GetFullName());
 
-            cathy.Age = -1;
+            //cathy.Age = -1;
 
-            Console.WriteLine($"Cathy's age is {cathy.Age}");
+            //Console.WriteLine($"Cathy's age is {cathy.Age}");
 
-            cathy.Age = 26;
+            //cathy.Age = 26;
 
-            Console.WriteLine($"Cathy's age is {cathy.Age}");
+            //Console.WriteLine($"Cathy's age is {cathy.Age}");
 
-            cathy.Age = -1;
+            //cathy.Age = -1;
 
-            Console.WriteLine($"Cathy's age is {cathy.Age}");
+            //Console.WriteLine($"Cathy's age is {cathy.Age}");
 
             //Person Nish;
             //Nish = new Person("Nish", "Mandal");
