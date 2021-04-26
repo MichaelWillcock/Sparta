@@ -140,7 +140,7 @@ namespace Lab_11_wpf
             }
             else if (_operation.Contains("/"))
             {
-                var answerDivide = 0;
+                int answerDivide = 0;
                 if (_num1 == 0)
                 {
                     try

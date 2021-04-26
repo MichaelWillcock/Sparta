@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_11_wpf"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="450">
+        Title="Calculator" Height="400" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
@@ -48,7 +48,7 @@
         <Button x:Name="Eight" Grid.Row="4" Grid.Column="3" Background="LightGray" Content="8" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
         <Button x:Name="Nine" Grid.Row="4" Grid.Column="5" Background="LightGray" Content="9" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
         <Button x:Name="Zero" Grid.Row="10" Grid.Column="3" Background="LightGray" Content="0" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
-        <Label x:Name="LabelOutput" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="2" Grid.RowSpan="1" FontSize="35" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" Background="BlanchedAlmond"/>
+        <Label x:Name="LabelOutput" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="2" Grid.RowSpan="1" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Background="BlanchedAlmond"/>
         <TextBlock x:Name="Title" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0,10,0,0" Text="Calculator" FontSize="30" VerticalAlignment="Top"/>
     </Grid>
 </Window>
