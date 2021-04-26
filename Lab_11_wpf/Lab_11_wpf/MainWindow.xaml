@@ -1,0 +1,54 @@
+﻿<Window x:Class="Lab_11_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_11_wpf"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonAdd" Grid.Row="4" Grid.Column="7" Background="AliceBlue" Content="+" FontSize="35" VerticalContentAlignment="Top" Click="OperationAndOtherNumber_Click"/>
+        <Button x:Name="ButtonSubtract" Grid.Row="6" Grid.Column="7" Background="AliceBlue" Content="-" FontSize="35" VerticalContentAlignment="Top" Click="OperationAndOtherNumber_Click"/>
+        <Button x:Name="ButtonMultiply" Grid.Row="8" Grid.Column="7" Background="AliceBlue" Content="x" FontSize="35" VerticalContentAlignment="Top" Click="OperationAndOtherNumber_Click"/>
+        <Button x:Name="ButtonDivide" Grid.Row="10" Grid.Column="7" Background="AliceBlue" Content="/" FontSize="35" VerticalContentAlignment="Top" Click="OperationAndOtherNumber_Click"/>
+        <Button x:Name="Equals" Grid.Row="10" Grid.Column="5" Background="AliceBlue" Content="=" FontSize="35" VerticalContentAlignment="Top" Click="Equals_Click"/>
+        <Button x:Name="Cancel" Grid.Row="10" Grid.Column="1" Background="Red" Content="C" FontSize="35" VerticalContentAlignment="Top" Click="Cancel_Click"/>
+        <Button x:Name="One" Grid.Row="8" Grid.Column="1" Background="LightGray" Content="1" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Two" Grid.Row="8" Grid.Column="3" Background="LightGray" Content="2" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Three" Grid.Row="8" Grid.Column="5" Background="LightGray" Content="3" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Four" Grid.Row="6" Grid.Column="1" Background="LightGray" Content="4" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Five" Grid.Row="6" Grid.Column="3" Background="LightGray" Content="5" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Six" Grid.Row="6" Grid.Column="5" Background="LightGray" Content="6" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Seven" Grid.Row="4" Grid.Column="1" Background="LightGray" Content="7" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Eight" Grid.Row="4" Grid.Column="3" Background="LightGray" Content="8" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Nine" Grid.Row="4" Grid.Column="5" Background="LightGray" Content="9" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Button x:Name="Zero" Grid.Row="10" Grid.Column="3" Background="LightGray" Content="0" FontSize="35" VerticalContentAlignment="Top" Click="AddNumber_Click"/>
+        <Label x:Name="LabelOutput" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="2" Grid.RowSpan="1" FontSize="35" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" Background="BlanchedAlmond"/>
+        <TextBlock x:Name="Title" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0,10,0,0" Text="Calculator" FontSize="30" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
