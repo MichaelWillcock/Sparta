@@ -11,7 +11,14 @@ namespace SafariParkApplication
         private string _firstName;
         private string _lastName;
 
-        public int Age { get; set; }
+        //public int Age { get; set; }
+        private int _age;
+
+        public int Age
+        {
+            get { return _age; }
+            set { if (value >= 0) _age = value; }
+        }
 
         public Person() { }
 
