@@ -15,7 +15,21 @@ namespace CarHomework
         public int NumPassengers
         {
             get { return _numPassengers; }
-            set { if (value >= 0 && value < _capacity) _numPassengers = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    _numPassengers = 0;
+                }
+                else if (value > _capacity)
+                {
+                    _numPassengers = _capacity;
+                }
+                else
+                {
+                    _numPassengers = value;
+                }
+            }
         }
 
         public string Move()

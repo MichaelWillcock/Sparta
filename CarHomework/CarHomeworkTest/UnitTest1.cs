@@ -21,5 +21,15 @@ namespace CarHomeworkTest
             Assert.AreEqual(40, v.Position);
             Assert.AreEqual("Moving along", result);
         }
+        [TestCase(5, -1, 0)]
+        [TestCase(5, 10, 5)]
+        [TestCase(5, 4, 4)]
+        public void NumPassengersVsCapacityTest(int capacity, int numPassengers, int expected)
+        {
+            Vehicle v = new Vehicle(capacity);
+            v.NumPassengers = numPassengers;
+            var result = v.NumPassengers;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
