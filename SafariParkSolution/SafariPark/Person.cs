@@ -19,7 +19,7 @@ namespace SafariPark
             set { if(value >=0) _age = value; }
         }
 
-        public Person(){}
+        public Person() { }
         public Person(string fName, string lName)
         {
             _firstName = fName;

@@ -38,10 +38,15 @@ namespace SafariPark
             // Point3d p;
 
 
-            Person paul = new Person("Paul", "McCartney") { Age = 80 };
-            Point3d pt3d = new Point3d(5, 8, 2);
-            DemoMethod(pt3d, paul);
-            
+            //Person paul = new Person("Paul", "McCartney") { Age = 80 };
+            //Point3d pt3d = new Point3d(5, 8, 2);
+            //DemoMethod(pt3d, paul);
+
+            //Hunter h = new Hunter("Hossain", "Ghazal", "Leica") { Age = 22 };
+            //Console.WriteLine(h.Age);
+            //Console.WriteLine(h.Shoot());
+
+            Hunter h2 = new Hunter();
         }
 
         static void DemoMethod(Point3d pt, Person p)
