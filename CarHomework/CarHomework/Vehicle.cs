@@ -10,13 +10,8 @@ namespace CarHomework
     {
         private int _capacity;
         private int _numPassengers;
-        private int _speed;
-        //public int Position { get; private set; }
-        public int Position
-        {
-            get { return _speed; }
-            private set { }
-        }
+        private int _speed = 10;
+        public int Position { get; private set; }
         public int NumPassengers
         {
             get { return _numPassengers; }
@@ -25,13 +20,15 @@ namespace CarHomework
 
         public string Move()
         {
+            Position += _speed;
             return "Moving along";
         }
 
-        public Vehicle() {}
+        public Vehicle() { }
 
         public string Move(int times) 
         {
+            Position += _speed * times;
             return $"Moving along {times} times";
         }
         public Vehicle(int capacity, int speed = 10)
