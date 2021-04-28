@@ -111,16 +111,54 @@ namespace SafariPark
 
             //safariObject.ForEach(x => Console.WriteLine(x.Move()));
 
-            var weaponObj = new List<IShootable>()
-            {
-                new Hunter("Nish", "Mandal", new Camera("Pentax")),
-                new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker")),
-                new Hunter("Nish", "Mandal", new LaserGun("Acme")),
-                new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker"))
+            //var weaponObj = new List<IShootable>()
+            //{
+            //    new Hunter("Nish", "Mandal", new Camera("Pentax")),
+            //    new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker")),
+            //    new Hunter("Nish", "Mandal", new LaserGun("Acme")),
+            //    new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker")),
+            //    new Hunter("Michael", "Willcock", new Rifle("Springfield",".15 cartridges", 50))
 
-            };
+            //};
 
-            weaponObj.ForEach(x => Console.WriteLine(x.Shoot()));
+            //weaponObj.ForEach(x => Console.WriteLine(x.Shoot()));
+
+            var photographer = new Hunter("Geoff", "Bridges", new Camera("Kodak"));
+
+            var springfieldRifle = new Rifle("Springfield", ".15 cartridges");
+            var superSoaker = new WaterPistol("Supersoaker", "ml of water", 1000);
+            var spartanLaser = new LaserGun("Spartan Laser", "kJ", 5000);
+
+            var rifleShoot = new Hunter("Michael", "Willcock", springfieldRifle);
+            var laserBlast = new Hunter("Master", "Chief", spartanLaser);
+
+            Console.WriteLine(photographer.Shoot());
+
+            Console.WriteLine(rifleShoot.Shoot());
+
+            springfieldRifle.Fire(7);
+
+            Console.WriteLine(rifleShoot.Shoot());
+
+            Console.WriteLine(superSoaker.Shoot());
+
+            superSoaker.Fire(10);
+
+            Console.WriteLine(superSoaker.Shoot());
+
+            superSoaker.Fire(1000);
+
+            Console.WriteLine(superSoaker.Shoot());
+
+            Console.WriteLine(laserBlast.Shoot());
+
+            spartanLaser.Fire(50);
+
+            Console.WriteLine(laserBlast.Shoot());
+
+            spartanLaser.Fire(5000);
+
+            Console.WriteLine(laserBlast.Shoot());
         }
 
         static void DemoMethod(Point3d pt, Person p)

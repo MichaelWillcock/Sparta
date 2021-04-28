@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SafariPark;
 
-namespace SafariPark
+namespace ClassesApp
 {
     class WaterPistol : Weapon
     {
@@ -12,10 +13,22 @@ namespace SafariPark
         {
             
         }
+        public WaterPistol(string brand, string ammoType = "Water", int ammo = 500) : base(brand, ammoType, ammo)
+        {
+
+        }
 
         public override string Shoot()
         {
-            return $"Splash!! Shooting a {base.ToString()}";
+            if (_ammo > 0)
+            {
+                return $"Splash!! Shooting a {base.ToString()}";
+            }
+            else
+            {
+                return $"Click!! Attempting to shoot a {base.ToString()}";
+            }
+            
         }
     }
 }

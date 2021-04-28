@@ -38,7 +38,7 @@
   <Class Name="SafariPark.Weapon">
     <Position X="6.5" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAFAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAARCAFAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Weapon.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -50,7 +50,7 @@
       <FileName>LaserGun.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SafariPark.WaterPistol">
+  <Class Name="ClassesApp.WaterPistol">
     <Position X="10.25" Y="3.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

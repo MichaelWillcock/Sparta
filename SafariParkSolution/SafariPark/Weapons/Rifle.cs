@@ -14,9 +14,21 @@ namespace ClassesApp
             
         }
 
+        public Rifle(string brand, string ammoType = "round", int ammo = 10) : base(brand, ammoType, ammo)
+        {
+
+        }
+
         public override string Shoot()
         {
-            return $"Bang!! Shooting a {base.ToString()}";
+            if (_ammo > 0)
+            {
+                return $"Bang!! Shooting a {base.ToString()}";
+            }
+            else
+            {
+                return $"Click!! Attempting to shoot a {base.ToString()}";
+            }
         }
     }
 }
