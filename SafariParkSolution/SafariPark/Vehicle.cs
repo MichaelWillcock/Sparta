@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarHomework
+namespace SafariPark
 {
-    public class Vehicle
+    public class Vehicle : IMoveable
     {
-        private int _capacity;
+        protected int _capacity;
         private int _numPassengers;
-        private int _speed = 10;
+        protected int _speed = 10;
         public int Position { get; private set; }
         public int NumPassengers
         {
@@ -32,7 +32,7 @@ namespace CarHomework
             }
         }
 
-        public string Move()
+        public virtual string Move()
         {
             Position += _speed;
             return "Moving along";
@@ -40,7 +40,7 @@ namespace CarHomework
 
         public Vehicle() { }
 
-        public string Move(int times)
+        public virtual string Move(int times)
         {
             Position += _speed * times;
             return $"Moving along {times} times";
@@ -49,6 +49,11 @@ namespace CarHomework
         {
             _capacity = capacity;
             _speed = speed;
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} capacity: {_capacity} passengers: {NumPassengers} speed: {_speed} position: {Position}";
         }
     }
 }

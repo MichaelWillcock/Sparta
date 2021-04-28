@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using CarHomework;
+using SafariPark;
 
 namespace CarHomeworkTest
 {

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using ClassesApp;
 
 namespace SafariPark
 {
@@ -43,16 +46,97 @@ namespace SafariPark
             //DemoMethod(pt3d, paul);
 
             //Hunter h = new Hunter("Hossain", "Ghazal", "Leica") { Age = 22 };
+            //Hunter h2 = new Hunter("Hossain", "Ghazal", "Leica") { Age = 22 };
+
+            //Console.WriteLine($"{h} Equals {h2}? {h.Equals(h2)}");
+            //Console.WriteLine($"{h} Hascode {h.GetHashCode()}");
+            //Console.WriteLine($"{h} ToString");
+
             //Console.WriteLine(h.Age);
             //Console.WriteLine(h.Shoot());
 
-            Hunter h2 = new Hunter();
+            //var rectangle1 = new Rectangle { Width = 10, Height = 10 };
+            //var rectangle2 = new Rectangle { Width = 15, Height = 10 };
+
+            //var totalArea = 0;
+
+            //var shapeList = new List<Shape> { rectangle1, rectangle2 };
+
+
+
+            //foreach (var x in shapeList)
+            //{
+            //    totalArea = x.CalculateArea();
+            //}
+
+            //Airplane a = new Airplane(200, 100, "JetRUs") { NumPassengers = 150 };
+            //a.Ascend(500);
+            //Console.WriteLine(a.Move(3));
+            //Console.WriteLine(a);
+
+            //a.Descend(200);
+            //Console.WriteLine(a.Move());
+
+            //a.Move();
+            //Console.WriteLine(a);
+
+            //var gameObject = new List<Object>()
+            //{
+            //    new Person ("Nish", "Mandal"),
+            //    new Airplane (400, 200, "Virgin Flights"),
+            //    new Hunter("Tim", "Burton", "Nikon")
+            //};
+
+            //gameObject.ForEach(x => Console.WriteLine(x));
+
+            //var liam = new Person("Liam", "Gallagher");
+            //SpartaWrite(liam);
+
+            //var cathy = new Person("Cathy", "French");
+            //var nish = new Hunter("Nish", "Mandal", "Pentax");
+
+            //var nishPerson = (Person)nish;
+            //var cathyHunter = (Hunter)cathy;
+
+            //SpartaWrite(nish);
+            //Console.WriteLine();
+            //SpartaWrite(cathy);
+
+            //var safariObject = new List<IMoveable>()
+            //{
+            //    new Person("Michael", "Willcock"),
+            //    new Person("Uzair", "Khan"),
+            //    new Person("Hossain", "Ghazal")
+            //};
+
+            //safariObject.ForEach(x => Console.WriteLine(x.Move()));
+
+            var weaponObj = new List<IShootable>()
+            {
+                new Hunter("Nish", "Mandal", new Camera("Pentax")),
+                new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker")),
+                new Hunter("Nish", "Mandal", new LaserGun("Acme")),
+                new Hunter("Nish", "Mandal", new WaterPistol("Supersoaker"))
+
+            };
+
+            weaponObj.ForEach(x => Console.WriteLine(x.Shoot()));
         }
 
         static void DemoMethod(Point3d pt, Person p)
         {
             pt.y = 1000;
             p.Age = 92;
+        }
+        static void SpartaWrite(Object obj)
+        {
+            Console.WriteLine(obj.ToString());
+
+            if (obj is Hunter)
+            {
+                var hunterObj = (Hunter)obj;
+                Console.WriteLine(hunterObj.Shoot());
+            }
         }
     }
 }

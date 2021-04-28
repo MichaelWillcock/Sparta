@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafariPark", "SafariPark.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTests", "..\VehicleTests\VehicleTests.csproj", "{6DAD9059-1B95-4DB0-B325-213CA1218874}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirplaneTest", "..\AirplaneTest\AirplaneTest.csproj", "{E4AD807E-B17A-4554-A397-EE7FA1B2699E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6DAD9059-1B95-4DB0-B325-213CA1218874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DAD9059-1B95-4DB0-B325-213CA1218874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DAD9059-1B95-4DB0-B325-213CA1218874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AD807E-B17A-4554-A397-EE7FA1B2699E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AD807E-B17A-4554-A397-EE7FA1B2699E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AD807E-B17A-4554-A397-EE7FA1B2699E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AD807E-B17A-4554-A397-EE7FA1B2699E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
