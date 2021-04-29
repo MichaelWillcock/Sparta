@@ -20,15 +20,7 @@ namespace ClassesApp
 
         public override string Shoot()
         {
-            if (_ammo > 0)
-            {
-                return $"Splash!! Shooting a {base.ToString()}";
-            }
-            else
-            {
-                return $"Click!! Attempting to shoot a {base.ToString()}";
-            }
-            
+            return (_ammo > 0) ? $"Splash!! Shooting a {base.ToString()}" : $"Click!! Attempting to shoot a {base.ToString()}";
         }
     }
 }

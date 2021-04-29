@@ -36,19 +36,7 @@ namespace SafariPark
 
         public override string ToString()
         {
-            if(_ammo == 0)
-            {
-                return $"{base.ToString()} - {_brand}. Warning - Out of Ammo.";
-            }
-            else if (_ammoType.Length != 0)
-            {
-                return $"{base.ToString()} - {_brand} loaded with {_ammo} {_ammoType}";
-            }
-            else
-            {
-                return $"{base.ToString()} - {_brand}";
-            }
-            
+            return (_ammo == 0) ? $"{base.ToString()} - {_brand}. Warning - Out of Ammo." : (_ammoType.Length != 0) ? $"{base.ToString()} - {_brand} loaded with {_ammo} {_ammoType}" : $"{base.ToString()} - {_brand}";
         }
 
         public Weapon(string brand)
