@@ -8,6 +8,6 @@ namespace DnDGame
 {
     interface IHealthable
     {
-        int hitPoints();
+        int HitPoints();
     }
 }

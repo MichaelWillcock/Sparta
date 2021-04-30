@@ -51,8 +51,7 @@ namespace DnDGame
 
             var playerClass = classList[classListIndex];
 
-            Console.WriteLine(playerClass);
-            playerClass.hitPoints();
+            playerClass.HitPoints();
             Console.WriteLine(playerClass);
         }
     }

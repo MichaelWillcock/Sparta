@@ -34,7 +34,7 @@ namespace DnDGame
         {
             _role = role;
         }
-        public virtual int hitPoints()
+        public virtual int HitPoints()
         {
             int hitPointmax = 0;
             var Dice = new DiceRoller();

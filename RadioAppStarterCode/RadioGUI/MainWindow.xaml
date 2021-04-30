@@ -1,0 +1,39 @@
+﻿<Window x:Class="RadioGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadioGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="On" Grid.Row="3" Grid.Column="1" Background="Red" Content=" On/Off" FontSize="20" Click="OnOff_Click"/>
+        <Button x:Name="Channel1" Grid.Row="3" Grid.Column="3" Background="Black" Foreground="White" Content="1" FontSize="30" Click="channelChange_Click"/>
+        <Button x:Name="Channel2" Grid.Row="3" Grid.Column="5" Background="Black" Foreground="White" Content="2" FontSize="30" Click="channelChange_Click"/>
+        <Button x:Name="Channel3" Grid.Row="3" Grid.Column="7" Background="Black" Foreground="White" Content="3" FontSize="30" Click="channelChange_Click"/>
+        <Button x:Name="Channel4" Grid.Row="3" Grid.Column="9" Background="Black" Foreground="White" Content="4" FontSize="30" Click="channelChange_Click"/>
+        <Label x:Name="LabelOutput" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="9" Background="Black" Foreground="LightGreen" FontSize="30" HorizontalContentAlignment="Left"/>
+        <Slider Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,55,0,0" Grid.Row="4" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

@@ -13,7 +13,7 @@ namespace DnDGame
         public Cleric(int hitdice, int str, int dex, int con, int intel, int wis, int cha) : base(hitdice, str, dex, con, intel, wis, cha)
         { }
 
-        public override int hitPoints()
+        public override int HitPoints()
         {
             var Dice = new DiceRoller();
             for (int i = 0; i <= 5; i++)
