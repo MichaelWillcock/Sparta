@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace DnDGame
 {
-    public class Fighter : Adventurer
+    public class Fighter : Adventurer, IWeaponable
     {
         protected int _armourClass;
         private int _hitPointMax;
-        public Fighter(int hitdice, int str, int dex, int con, int intel, int wis, int cha) : base(hitdice, str, dex, con, intel, wis, cha)
-        { }
+        public IWeaponable Weapon { get; set; }
+        public Fighter(int hitdice, int str, int dex, int con, int intel, int wis, int cha, IWeaponable weapon) : base(hitdice, str, dex, con, intel, wis, cha)
+        {
+            Weapon = weapon;
+        }
 
         public override int HitPoints()
         {
@@ -27,6 +30,11 @@ namespace DnDGame
         public override string ToString()
         {
             return $"You are a Fighter with {_hitPointMax} hit points";
+        }
+
+        public string ListWeapon()
+        {
+            return Weapon.ListWeapon();
         }
     }
 }

@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace DnDGame
 {
-    public abstract class Weapon : IWeaponable
+    public class Knives : Weapon
     {
-        protected string _name;
-        protected int damage;
-
-        public Weapon() { }
-        public Weapon(string name)
+        public Knives() { }
+        public Knives(string name) : base(name)
         {
-            _name = name;
+
         }
-        public virtual string ListWeapon()
+        public override string ListWeapon()
         {
             return _name;
         }
