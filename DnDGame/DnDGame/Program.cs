@@ -30,7 +30,7 @@ namespace DnDGame
             classList.Add("COS", new Cleric(8, 14, 10, 13, 12, 18, 12));
             classList.Add("TOS", new Thief(8, 12, 18, 10, 14, 12, 13));
 
-            int classListIndex = 0;
+            string classListIndex = "";
             bool validClass = false;
             do
             {
@@ -38,22 +38,22 @@ namespace DnDGame
                 string playerClassString = Console.ReadLine().ToLower();
                 if (playerClassString.Equals("fighter"))
                 {
-                    classListIndex = 0;
+                    classListIndex = "F";
                     validClass = true;
                 }
                 else if (playerClassString.Equals("wizard"))
                 {
-                    classListIndex = 1;
+                    classListIndex = "W";
                     validClass = true;
                 }
                 else if (playerClassString.Equals("cleric"))
                 {
-                    classListIndex = 2;
+                    classListIndex = "C";
                     validClass = true;
                 }
                 else if (playerClassString.Equals("thief"))
                 {
-                    classListIndex = 3;
+                    classListIndex = "T";
                     validClass = true;
                 }
                 else
