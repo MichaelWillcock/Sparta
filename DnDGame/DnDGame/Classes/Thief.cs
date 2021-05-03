@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace DnDGame
 {
-    class Thief : Adventurer
+    class Thief : Adventurer, IWeaponable
     {
         protected int _armourClass;
         private int _hitPointMax;
-        public Thief(int hitdice, int str, int dex, int con, int intel, int wis, int cha) : base(hitdice, str, dex, con, intel, wis, cha)
-        { }
+        public IWeaponable Weapon { get; set; }
+        public Thief(int hitdice, int str, int dex, int con, int intel, int wis, int cha, IWeaponable weapon) : base(hitdice, str, dex, con, intel, wis, cha)
+        {
+            Weapon = weapon;
+        }
 
         public override int HitPoints()
         {
@@ -25,7 +28,11 @@ namespace DnDGame
         }
         public override string ToString()
         {
-            return $"You are a Thief with {_hitPointMax} hit points";
+            return $"You are a Thief with {_hitPointMax} hit points.\nEquipment: You are clad in leather armour and are wielding a {Weapon.ListWeapon()}";
+        }
+        public override string ListWeapon()
+        {
+            return Weapon.ListWeapon();
         }
     }
 }

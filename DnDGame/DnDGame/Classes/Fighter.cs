@@ -8,7 +8,7 @@ namespace DnDGame
 {
     public class Fighter : Adventurer, IWeaponable
     {
-        protected int _armourClass;
+        private int _armourClass = 18;
         private int _hitPointMax;
         public IWeaponable Weapon { get; set; }
         public Fighter(int hitdice, int str, int dex, int con, int intel, int wis, int cha, IWeaponable weapon) : base(hitdice, str, dex, con, intel, wis, cha)
@@ -29,10 +29,10 @@ namespace DnDGame
 
         public override string ToString()
         {
-            return $"You are a Fighter with {_hitPointMax} hit points";
+            return $"You are a Fighter with {_hitPointMax} hit points.\nEquipment: You are clad in full plate armour and are wielding a {Weapon.ListWeapon()}";
         }
 
-        public string ListWeapon()
+        public override string ListWeapon()
         {
             return Weapon.ListWeapon();
         }

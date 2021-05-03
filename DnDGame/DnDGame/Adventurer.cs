@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnDGame
 {
-    public class Adventurer : IHealthable
+    public class Adventurer : IHealthable, IWeaponable
     {
         protected int _pBonus = 2;
         protected int _hitdice;
@@ -18,6 +18,7 @@ namespace DnDGame
         protected int _charisma;
         protected int _armourClass;
         protected string _role;
+        public IWeaponable Weapon;
 
         public Adventurer() { }
         public Adventurer(int hitdice, int str, int dex, int con, int intel, int wis, int cha)
@@ -44,6 +45,10 @@ namespace DnDGame
                 hitPointmax += hitPoints;
             }
             return hitPointmax;
+        }
+        public virtual string ListWeapon()
+        {
+            return Weapon.ListWeapon();
         }
     }
 }
