@@ -105,7 +105,7 @@ namespace DataHomework
             //foreach (var item in studentQuery8)
             //{
             //    Console.WriteLine("Student ID: {0}, Score: {1}", item.id, item.score);
-            }
+            //}
         }
         public class Student
         {
