@@ -122,7 +122,7 @@ namespace DnDGame
 
             
             var playerClass = classList[classListIndex];
-            playerClass.EquipShield();
+            //playerClass.EquipShield();
             playerClass.HitPoints();
             Console.WriteLine(playerClass);
         }
