@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using CodeFromNorthwind;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeFromNorthwindBusiness
 {
@@ -46,102 +48,44 @@ namespace CodeFromNorthwindBusiness
 
             using (var db = new NorthwindContext())
             {
-                ////deffered query
-                //var query1 =
-                //    from c in db.Customers
-                //    where c.City == "London"
-                //    select c;
+                //var orderQuery =
+                //    from order in db.Orders.Include(o => o.Customer)
+                //    where order.Freight > 750
+                //    select order;
 
-                ////forcing query execution
-                //var queryList = query1.ToList();
-
-                //foreach (var item in query1)
+                //foreach (var order in orderQuery)
                 //{
-                //    Console.WriteLine(item);
+                //    Console.WriteLine($"{order.Customer.CompanyName} paid {order.Freight} for shipping to {order.ShipCity}");
                 //}
 
-                //var londonOrBerlinQuery1 =
-                //    from customer in db.Customers
-                //    where customer.City == "London" || customer.City == "Berlin"
-                //    select customer;
+                var orderQueryWithCust =
+                    db.Orders.Include(o => o.Customer).Include(o => o.OrderDetails).ThenInclude(od => od.Product);
 
-                //foreach (var item in londonOrBerlinQuery1)
-                //{
-                //    Console.WriteLine(item);
-                //}
-
-                //var londonOrBerlinQuery2 =
-                //    from customer in db.Customers
-                //    where customer.City == "London" || customer.City == "Berlin"
-                //    select new { CustomerName = customer.CompanyName, Country = customer.Country };
-
-                //foreach (var item in londonOrBerlinQuery2)
-                //{
-                //    Console.WriteLine(item);
-                //}
-
-                //var groupProductsByUnitInStockQuery =
-                //    from p in db.Products
-                //    group p by p.SupplierId into newGroup
-                //    orderby newGroup.Sum(c => c.UnitsInStock) descending
-                //    select new
-                //    {
-                //        SupplierID = newGroup.Key,
-                //        UnitsOnStock = newGroup.Sum(c => c.UnitsInStock)
-                //    };
-
-                //foreach (var item in groupProductsByUnitInStockQuery)
-                //{
-                //    Console.WriteLine(item);
-                //}
-
-                //var x = db.Products.GroupBy(c => c.SupplierId);
-
-                //var orderProductsByUnitPrice =
-                //    from p in db.Products
-                //    orderby p.UnitPrice descending
-                //    select p;
-
-                //orderProductsByUnitPrice.ToList().ForEach(p => Console.WriteLine($"{p.ProductId} - {p.UnitPrice}"));
-
-                ////CRUD OPERATIONS
-                //CREATE
-                //var newCustomer = new Customer
-                //{
-                //    CustomerId = "HARDI",
-                //    ContactName = "Callum Harding",
-                //    CompanyName = "Sparta Global"
-                //};
-
-                //db.Customers.Add(newCustomer);
-                //db.SaveChanges();
-
-
-                //UPDATE
-                //var selectedCustomer =
-                //    from c in db.Customers
-                //    where c.CustomerId == "HARDI"
-                //    select c;
-
-                //foreach (var customer in selectedCustomer)
-                //{
-                //    customer.City = "Paris";
-                //}
-                //db.SaveChanges();
-
-                //DELETE
-                //var selectedCustomer =
-                //    from c in db.Customers
-                //    where c.CustomerId == "HARDI"
-                //    select c;
-
-                //foreach (var customer in selectedCustomer)
-                //{
-                //    db.Customers.Remove(customer);
-                //}
-                //db.SaveChanges();
-
+                foreach (var o in orderQueryWithCust)
+                {
+                    Console.WriteLine($"Order {o.OrderId} was made by {o.Customer.CompanyName}");
+                    foreach (var od in o.OrderDetails)
+                    {
+                        Console.WriteLine($"\t Product: {od.Product.ProductName} - Quantity: {od.Quantity}");
+                    }
+                }
             }
+
+
         }
     }
+    //    static bool isYoung(Person P)
+    //    {
+    //        return P.Age < 30;
+    //    }
+    //    static bool isEven(int x)
+    //    {
+    //        return x % 2 == 0;
+    //    }
+    //}
+    //public class Person
+    //{
+    //    public string Name { get; set; }
+    //    public int Age { get; set; }
+    //}
 }
