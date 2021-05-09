@@ -9,11 +9,11 @@ namespace SouthwindContextBusiness
 {
     public class CustomerManager
     {
-        public Customer selectedCustomer { get; set; }
+        public Customer SelectedCustomer { get; set; }
 
-        public void AddCustomer(string customerId, string contactName)
+        public void AddCustomer(string customerId, string contactName, string companyName)
         {
-            var newCust = new Customer() { CustomerId = customerId, ContactName = contactName };
+            var newCust = new Customer() { CustomerId = customerId, ContactName = contactName, CompanyName = companyName };
             using (var db = new SouthwindContext())
             {
                 db.Customers.Add(newCust);
@@ -38,6 +38,24 @@ namespace SouthwindContextBusiness
             using (var db = new SouthwindContext())
             {
                 return db.Customers.ToList();
+            }
+        }
+        public void SetSelectedCustomer(object selectedItem)
+        {
+            SelectedCustomer = (Customer)selectedItem;
+        }
+        public void UpdateCustomer(string customerId, string contactName, string companyName, string city, string country, string postCode)
+        {
+            using (var db = new SouthwindContext())
+            {
+                SelectedCustomer = db.Customers.Where(c => c.CustomerId == customerId).FirstOrDefault();
+                SelectedCustomer.ContactName = contactName;
+                SelectedCustomer.CompanyName = companyName;
+                SelectedCustomer.City = city;
+                SelectedCustomer.Country = country;
+                SelectedCustomer.PostalCode = postCode;
+                // write changes to database
+                db.SaveChanges();
             }
         }
     }

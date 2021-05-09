@@ -5,25 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIForDatabase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="550">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition Width="95"/>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="listBox1" Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Width="250" Height="305" Margin="0,62,0,0"/>
-        <TextBlock Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="Customer ID :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Name="CustomerIdInput" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue" Width="100" Height="50"/>
-        <TextBlock Name="ContactName" Grid.Row="1" Grid.Column="1" Text="Contact Name :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Name="ContactNameInput" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue" Width="100" Height="50"/>
-        <Button Name="AddItem" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Silver" Content="Add Item" Click="AddItem_Click"/>
-        <Button Name="RemoveItem" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Silver" Content="Remove Item" Click="RemoveItem_Click"/>
+        <ListBox Name="listBox1" Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Width="400" Height="305" Margin="0,62,0,0"/>
+        <TextBlock Name="CustomerId" Grid.Row="0" Grid.Column="1" Text="Customer ID : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="CustomerIdInput" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <TextBlock Name="ContactName" Grid.Row="1" Grid.Column="1" Text="Contact Name : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="ContactNameInput" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <TextBlock Name="CompanyName" Grid.Row="2" Grid.Column="1" Text="Company Name : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="CompanyNameInput" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <TextBlock Name="City" Grid.Row="0" Grid.Column="3" Text="City : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="CityInput" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <TextBlock Name="Country" Grid.Row="1" Grid.Column="3" Text="Country : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="CountryInput" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <TextBlock Name="PostCode" Grid.Row="2" Grid.Column="3" Text="Post Code : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="PostCodeInput" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Width="100" Height="30"/>
+        <Button Name="AddItem" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Silver" Content="Add Customer" Click="AddItem_Click"/>
+        <Button Name="RemoveItem" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Silver" Content="Remove Customer" Click="RemoveItem_Click"/>
+        <Button Name="UpdateItem" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Silver" Content="Update Customer" Click="UpdateItem_Click"/>
     </Grid>
 </Window>

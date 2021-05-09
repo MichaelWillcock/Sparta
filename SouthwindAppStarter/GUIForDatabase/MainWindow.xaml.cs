@@ -41,28 +41,30 @@ namespace GUIForDatabase
                     from c in db.Customers
                     where c.CustomerId == CustomerIdInput.Text
                     select c.CustomerId;
-                foreach (var item in query)
+                if (query.Contains(CustomerIdInput.Text))
                 {
-                    if (item.Contains(CustomerIdInput.Text))
-                    {
-                        MessageBox.Show("Error, CustomerId already taken. Please enter a different option");
-                        break;
-                    }
-                    else
-                    {
-                        x = true;
-                    }
+                    MessageBox.Show("Error, CustomerId already taken. Please enter a different option");
+                }
+                else
+                {
+                    x = true;
                 }
             }
             if (x == true)
             {
-                _customerManager.AddCustomer(CustomerIdInput.Text, ContactNameInput.Text);
+                _customerManager.AddCustomer(CustomerIdInput.Text, ContactNameInput.Text, CompanyNameInput.Text);
             }
             FillListBox();
         }
         private void RemoveItem_Click(object sender, RoutedEventArgs e)
         {
             _customerManager.RemoveCustomer(CustomerIdInput.Text);
+            FillListBox();
+        }
+
+        private void UpdateItem_Click(object sender, RoutedEventArgs e)
+        {
+            _customerManager.UpdateCustomer(CustomerIdInput.Text, ContactNameInput.Text, CompanyNameInput.Text, CityInput.Text, CountryInput.Text, PostCodeInput.Text);
             FillListBox();
         }
     }
