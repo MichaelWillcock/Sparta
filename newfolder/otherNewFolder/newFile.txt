@@ -1,0 +1,2 @@
+Added content to myFile
+Added some more conent to myFile
