@@ -37,6 +37,7 @@ namespace GUIForDatabase
             bool x = false;
             using (var db = new SouthwindContext())
             {
+                //Change so that query calls a method from Customer Manager, Don't have gui talking to databse
                 var query =
                     from c in db.Customers
                     where c.CustomerId == CustomerIdInput.Text
@@ -58,7 +59,11 @@ namespace GUIForDatabase
         }
         private void RemoveItem_Click(object sender, RoutedEventArgs e)
         {
-            _customerManager.RemoveCustomer(CustomerIdInput.Text);
+            if(MessageBox.Show("Are you sure you want to delete this customer", "Confimation"
+                , MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _customerManager.RemoveCustomer(CustomerIdInput.Text);
+            }
             FillListBox();
         }
 
