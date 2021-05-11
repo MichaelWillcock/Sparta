@@ -8,6 +8,7 @@ namespace DnDCharacterBuilderData
 {
     public partial class StatLine
     {
+        public string StatLineId { get; set; }
         public string CharacterId { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }

@@ -8,7 +8,7 @@ namespace DnDCharacterBuilderData
 {
     public partial class Classes
     {
-        public string ClassId { get; set; }
+        public string ClassesId { get; set; }
         public string CharacterId { get; set; }
         public string ClassName { get; set; }
         public int HitDice { get; set; }

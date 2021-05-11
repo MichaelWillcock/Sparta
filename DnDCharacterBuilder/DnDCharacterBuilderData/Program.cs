@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DnDCharacterBuilderData
 {
-    public partial class Levels
+    class Program
     {
-        public int LevelsId { get; set; }
-        public int Level { get; set; }
-        public int ProficiencyBonus { get; set; }
+        static void Main(string[] args)
+        {
+        
+        }
     }
 }
