@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace AysncCake
 {
@@ -16,16 +17,17 @@ namespace AysncCake
         private static void HaveAParty()
         {
             var name = "Cathy";
-            var cake = BakeCake();
+            var caketask = BakeCakeAsync();
             PlayPartyGames();
             OpenPresents();
+            var cake = caketask.Result;
             Console.WriteLine($"Happy birthday, {name}, {cake}!!");
         }
 
-        private static Cake BakeCake()
+        private static async Task<Cake> BakeCakeAsync()
         {
             Console.WriteLine("Cake is in the oven");
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            await Task.Delay(TimeSpan.FromSeconds(5));
             Console.WriteLine("Cake is done");
             return new Cake();
         }
