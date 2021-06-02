@@ -31,7 +31,7 @@ namespace SouthwindTests
             using(var db = new SouthwindContext())
             {
                 var x = db.Customers.Count();
-                _customerManager.AddCustomer("WILLC", "Michael Willcock");
+                _customerManager.AddCustomer("WILLC", "Michael Willcock", "Sparta Global");
                 var y = db.Customers.Count();
                 Assert.AreEqual(y, x + 1);
             }
