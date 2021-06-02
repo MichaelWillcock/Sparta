@@ -10,7 +10,7 @@ namespace ClassesApp
         LaserGun,
         BubbleBlaster
     }
-    public class Weapon : IShootable
+    public abstract class Weapon : IShootable
     {
         private WeaponType _weaponType;
         private string _brand;
@@ -36,6 +36,8 @@ namespace ClassesApp
             }
             return result;
         }
+
+        public o
 
         public virtual string Shoot()
         {
