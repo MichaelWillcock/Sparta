@@ -17,11 +17,21 @@ namespace AysncCake
         private static void HaveAParty()
         {
             var name = "Cathy";
+            var castletask = SetUpABouncyCastleAsync();
             var caketask = BakeCakeAsync();
             PlayPartyGames();
             OpenPresents();
             var cake = caketask.Result;
+            var castle = castletask.Result;
             Console.WriteLine($"Happy birthday, {name}, {cake}!!");
+        }
+
+        private static async Task<BouncyCastle>  SetUpABouncyCastleAsync()
+        {
+            Console.WriteLine("Blow up the bouncy castle");
+            await Task.Delay(TimeSpan.FromSeconds(4));
+            Console.WriteLine("Get off bouncy castle before cake");
+            return new BouncyCastle();
         }
 
         private static async Task<Cake> BakeCakeAsync()
@@ -52,6 +62,13 @@ namespace AysncCake
         public override string ToString()
         {
             return "Here's a cake";
+        }
+    }
+    public class BouncyCastle
+    {
+        public override string ToString()
+        {
+            return "take down bouncy castle";
         }
     }
 }
