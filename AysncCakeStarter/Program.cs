@@ -24,6 +24,7 @@ namespace AysncCake
             var cake = caketask.Result;
             var castle = castletask.Result;
             Console.WriteLine($"Happy birthday, {name}, {cake}!!");
+            Console.WriteLine(castle);
         }
 
         private static async Task<BouncyCastle>  SetUpABouncyCastleAsync()
