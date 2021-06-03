@@ -24,6 +24,10 @@ namespace NorthwindBusiness
         }
         public CustomerManager(ICustomerService service)
         {
+            if (service == null)
+            {
+                throw new ArgumentException("Customer Service cannot be null");
+            }
             _service = service;
         }
         public void CreateCustomer(string customerId, string contactName = null, string city = null, string postalCode = null, string country = null, string companyName = "")
