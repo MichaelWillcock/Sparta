@@ -1,49 +1,60 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
+using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APITestApp.Service
+namespace APITestApp
 {
-    //Make a request to use the API
+    #region Properties
+    //Make a request to the api
+    //store the returned data
+    //so it can be used in tests
+    //store and use configuration information
+    #endregion
     class SinglePostcodeService
     {
-        //Restsharp object that handles communication with the api
-        public RestClient CLient;
-
+        #region
+        //Restsharp object which handles communications with the api
+        public RestClient Client;
+        //Newtonsoft object representing the JSON response
         public JObject ResponseContent { get; set; }
+        //The postcode used in the api request
         public string PostcodeSelected { get; set; }
+        //Store the status code
         public string StatusCode { get; set; }
+        //An object model of the response
+        public SinglePostcodeResponse ResponseObject { get; set; }
+        #endregion
 
         public SinglePostcodeService()
         {
-            CLient = new RestClient { BaseUrl = new Url(AppConfigReader.BaseUrl) };
+            Client = new RestClient { BaseUrl = new Uri(AppConfigReader.BaseUrl) };
         }
-
-        public Task MakeRequest(string postcode)
+        public async Task MakeRequestAsync(string postcode)
         {
-            //set up the request
+            //set up request
             var request = new RestRequest(Method.GET);
             request.AddHeader("Content-Type", "application/json");
             PostcodeSelected = postcode;
 
-            //Define the resources path
-            request.Resource = $"postcodes/{postcode.ToLower().Replace(" ", "")}";
+            //Define the resource path
+            request.Resource = $"/postcodes/{postcode.ToLower().Replace(" ", "")}";
 
-            //Execute and store the response
+            //request and store the response
             var response = await Client.ExecuteAsync(request);
 
-            //Parse JSON  response content
+            //Parse our json response content
             ResponseContent = JObject.Parse(response.Content);
 
             //Capture the status code
-            StatusCode = response.StatusCode;
+            StatusCode = response.StatusCode.ToString();
 
-            //PARSE JSON in an object
-            ResponseObject = JsonConvert.DeserializeObject<SinglePostcodeService>(response.Content);
-
+            //Parse JSON in an object
+            ResponseObject = JsonConvert.DeserializeObject<SinglePostcodeResponse>(response.Content);
         }
     }
 }

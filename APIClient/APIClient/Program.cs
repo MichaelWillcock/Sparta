@@ -21,26 +21,28 @@ namespace APIClient
             #region
             //set up the request. WE are going to create a request object.
             #endregion
-            var resttRequest = new RestRequest();
+            var restRequest = new RestRequest();
+            #region
             //set method as GET
-            resttRequest.Method = Method.GET;
+            #endregion
+            restRequest.Method = Method.GET;
             #region
             //We are now going to specify our request header. Specify the content type.
             #endregion
-            resttRequest.AddHeader("Content-Type", "application/json");
-            resttRequest.Timeout = -1;
+            restRequest.AddHeader("Content-Type", "application/json");
+            restRequest.Timeout = -1;
             #region
             //We are now going to est up the resource EC2y 5AS
             //Get rid of all spaces and lower cases.
             #endregion
             var postcode = "EC2Y 5AS";
-            resttRequest.Resource = $"postcodes/{postcode.ToLower().Replace(" ", "")}";
+            restRequest.Resource = $"postcodes/{postcode.ToLower().Replace(" ", "")}";
             #region
             //now we are going to use our rest client to execute our request and it will also store
             //the bulkResponse.
             #endregion
-            var singleResponse = restClient.Execute(resttRequest);
-            Console.WriteLine("Rest bulkResponse content (as string)");
+            var singleResponse = restClient.Execute(restRequest);
+            Console.WriteLine("Rest singleResponse content (as string)");
             Console.WriteLine(singleResponse.Content);
 
             ////////////BULK POSTCODE REQUEST//////////////////

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIClient", "APIClient\APIClient.csproj", "{D6EDBED3-4B66-4544-BADB-E0971CC3DE8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIClient", "APIClient\APIClient.csproj", "{D6EDBED3-4B66-4544-BADB-E0971CC3DE8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestApp", "APITestApp\APITestApp.csproj", "{7BD7F121-680F-4119-ACAD-D9F0F1B27027}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestApp", "APITestApp\APITestApp.csproj", "{166504C7-1164-453A-9FF5-4F51165F2AF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D6EDBED3-4B66-4544-BADB-E0971CC3DE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6EDBED3-4B66-4544-BADB-E0971CC3DE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6EDBED3-4B66-4544-BADB-E0971CC3DE8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BD7F121-680F-4119-ACAD-D9F0F1B27027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BD7F121-680F-4119-ACAD-D9F0F1B27027}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BD7F121-680F-4119-ACAD-D9F0F1B27027}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BD7F121-680F-4119-ACAD-D9F0F1B27027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166504C7-1164-453A-9FF5-4F51165F2AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166504C7-1164-453A-9FF5-4F51165F2AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166504C7-1164-453A-9FF5-4F51165F2AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166504C7-1164-453A-9FF5-4F51165F2AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
