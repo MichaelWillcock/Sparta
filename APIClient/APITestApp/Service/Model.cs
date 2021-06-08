@@ -25,7 +25,7 @@ namespace APITestApp
     }
 
 
-    public class OutcodeResponse
+    public class SingleOutcodeResponse
     {
         public int status { get; set; }
         public Outcode result { get; set; }

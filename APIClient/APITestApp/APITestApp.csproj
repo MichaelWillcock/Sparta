@@ -81,8 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\AppConfigReader.cs" />
+    <Compile Include="Service\BulkPostcodeService.cs" />
     <Compile Include="Service\Model.cs" />
+    <Compile Include="Service\SingleOutcodeService.cs" />
     <Compile Include="Service\SinglePostcodeService.cs" />
+    <Compile Include="Tests\BulkPostcodeResponseTest.cs" />
+    <Compile Include="Tests\SingleOutcodeServiceTests.cs" />
     <Compile Include="Tests\SinglePostcodeResponseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
