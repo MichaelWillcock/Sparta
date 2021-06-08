@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace APITestApp
 {
 
-    public class BulkPostcodeResponse
+    public class BulkPostcodeResponse : IResponse
     {
         public int status { get; set; }
         public Result[] result { get; set; }
     }
-    public class SinglePostcodeResponse
+    public class SinglePostcodeResponse : IResponse
     {
         public int Status { get; set; }
         public Postcode result { get; set; }
@@ -25,7 +25,7 @@ namespace APITestApp
     }
 
 
-    public class SingleOutcodeResponse
+    public class SingleOutcodeResponse : IResponse
     {
         public int status { get; set; }
         public Outcode result { get; set; }

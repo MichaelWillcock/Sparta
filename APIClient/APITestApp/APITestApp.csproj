@@ -81,16 +81,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\AppConfigReader.cs" />
-    <Compile Include="Service\BulkPostcodeService.cs" />
-    <Compile Include="Service\Model.cs" />
-    <Compile Include="Service\SingleOutcodeService.cs" />
-    <Compile Include="Service\SinglePostcodeService.cs" />
+    <Compile Include="PostcodesIoService\BulkPostcodeService.cs" />
+    <Compile Include="PostcodesIoService\DataHandling\IResponse.cs" />
+    <Compile Include="PostcodesIoService\DataHandling\Model.cs" />
+    <Compile Include="PostcodesIoService\DataHandling\DTO.cs" />
+    <Compile Include="PostcodesIoService\HTTPManager\CallManager.cs" />
+    <Compile Include="PostcodesIoService\SingleOutcodeService.cs" />
+    <Compile Include="PostcodesIoService\SinglePostcodeService.cs" />
     <Compile Include="Tests\BulkPostcodeResponseTest.cs" />
     <Compile Include="Tests\SingleOutcodeServiceTests.cs" />
     <Compile Include="Tests\SinglePostcodeResponseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Config\app.config" />
     <None Include="packages.config" />
   </ItemGroup>

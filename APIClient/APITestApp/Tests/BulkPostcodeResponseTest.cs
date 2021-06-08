@@ -21,24 +21,24 @@ namespace APITestApp
         [Test]
         public void StatusIs200()
         {
-            Assert.That(_bulkPostcodeService.ResponseContent["status"].ToString(), Is.EqualTo("200"));
+            Assert.That(_bulkPostcodeService.Json_Response["status"].ToString(), Is.EqualTo("200"));
 
         }
 
         public void StatusIs200_Alt()
         {
-            Assert.That(_bulkPostcodeService.StatusCode, Is.EqualTo("200"));
+            Assert.That(_bulkPostcodeService.CallManager.StatusDescription, Is.EqualTo("200"));
         }
         [Test]
         public void ObjectStatusIs200()
         {
-            Assert.That(_bulkPostcodeService.ResponseObject.status, Is.EqualTo(200));
+            Assert.That(_bulkPostcodeService.BulkPostcodeDTO.Response.status, Is.EqualTo(200));
         }
 
         [Test]
         public void RegionForOX495NUIsCorrect()
         {
-            var selectedLocation = _bulkPostcodeService.ResponseObject.result.Where(x => x.query == "OX49 5NU").FirstOrDefault();
+            var selectedLocation = _bulkPostcodeService.BulkPostcodeDTO.Response.result.Where(x => x.query == "OX49 5NU").FirstOrDefault();
             Assert.That(selectedLocation.result.region, Is.EqualTo("South East"));
         }
 
