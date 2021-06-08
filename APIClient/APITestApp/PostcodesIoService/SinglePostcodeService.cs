@@ -17,7 +17,7 @@ namespace APITestApp
     #endregion
     class SinglePostcodeService
     {
-        #region
+        #region PropertyList
         //Call manager we can access method and it's properties
         public CallManager CallManager { get; set; }
         //Newtonsoft object representing the JSON response

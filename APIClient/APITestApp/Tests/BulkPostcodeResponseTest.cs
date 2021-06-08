@@ -19,7 +19,7 @@ namespace APITestApp
         }
 
         [Test]
-        public void StatusIs200()
+        public void StatusIs200Async()
         {
             Assert.That(_bulkPostcodeService.Json_Response["status"].ToString(), Is.EqualTo("200"));
 
@@ -41,6 +41,14 @@ namespace APITestApp
             var selectedLocation = _bulkPostcodeService.BulkPostcodeDTO.Response.result.Where(x => x.query == "OX49 5NU").FirstOrDefault();
             Assert.That(selectedLocation.result.region, Is.EqualTo("South East"));
         }
-
+        [Test]
+        public async Task CallingResultOfNoValues_ReturnsEmptyArray()
+        {
+            _bulkPostcodeService = new BulkPostcodeService();
+            await _bulkPostcodeService.MakeRequestAsync(new string[] { });
+            //Assert.That(_bulkPostcodeService.Json_Response["status"].ToString(), Is.EqualTo("200"));
+            Assert.That(_bulkPostcodeService.Json_Response["result"].ToString(), Is.Empty);
+        }
+        
     }
 }

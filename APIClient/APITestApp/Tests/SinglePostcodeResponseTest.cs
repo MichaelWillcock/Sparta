@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Threading.Tasks;
 
 namespace APITestApp
 {
@@ -40,6 +41,19 @@ namespace APITestApp
         {
             Assert.That(_singlePostcodeService.CodeCount(), Is.EqualTo(12));
         }
-
+        [Test]
+        public async Task StatusOfInvalidOutcodeGives_404Async()
+        {
+            _singlePostcodeService = new SinglePostcodeService();
+            await _singlePostcodeService.MakeRequestAsync("10");
+            Assert.That(_singlePostcodeService.Json_Response["status"].ToString(), Is.EqualTo("404"));
+        }
+        [Test]
+        public async Task StatusOfNoInputOutcodeGives_400Async()
+        {
+            _singlePostcodeService = new SinglePostcodeService();
+            await _singlePostcodeService.MakeRequestAsync("");
+            Assert.That(_singlePostcodeService.Json_Response["status"].ToString(), Is.EqualTo("400"));
+        }
     }
 }

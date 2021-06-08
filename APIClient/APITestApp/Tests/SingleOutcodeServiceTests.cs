@@ -45,5 +45,26 @@ namespace APITestApp
         {
             Assert.That(_singleOutcodeService.SingleOutcodeDTO.Response.result.admin_district[0], Is.EqualTo("Birmingham"));
         }
+
+        [Test]
+        public void AdminRegionIsWestMidlands_ForOutcodeB76_usingObject()
+        {
+            Assert.That(_singleOutcodeService.SingleOutcodeDTO.Response.result.admin_county[0], Is.EqualTo("Warwickshire"));
+        }
+        [Test]
+        public async Task StatusOfInvalidOutcodeGives_404Async()
+        {
+            _singleOutcodeService = new SingleOutcodeService();
+            await _singleOutcodeService.MakeRequestAsync("10");
+            Assert.That(_singleOutcodeService.Json_Response["status"].ToString(), Is.EqualTo("404"));
+        }
+        [Test]
+        public async Task StatusOfNoInputOutcodeGives_400Async()
+        {
+            _singleOutcodeService = new SingleOutcodeService();
+            await _singleOutcodeService.MakeRequestAsync("");
+            Assert.That(_singleOutcodeService.Json_Response["status"].ToString(), Is.EqualTo("400"));
+        }
+
     }
 }
