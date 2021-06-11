@@ -1,0 +1,115 @@
+body{
+    background-color: lightblue;
+    color: rgb(4, 11, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Stint Ultra Condensed', cursive; */
+    font-size: 16px;
+    font-weight: lighter;
+    background-image: url("https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Day-Blue.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* font: lighter 16px, Arial, Helvetica, sans-serif; */
+}
+.container
+{
+    width: 80%;
+    margin: auto
+}
+h1{
+    color: #ff0000
+}
+
+/* long way of going borders */
+.box-1
+{
+    background-color: whitesmoke;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+    border-left: 5px red solid;
+    border-right: 5px red solid;
+    border-style: ridge;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+/* short way of going borders */
+
+.box-2
+{
+    background-color: wheat;
+    border: 5px rebeccapurple solid;
+    padding: 20px;
+    margin: 10px
+}   
+
+
+.box-1 h4
+{
+    font-family: Tahoma;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.1em
+}
+
+a
+{
+    /* get rid of the underlien on all link and make black */
+    text-decoration: none;
+    color: black
+}
+
+a:hover
+{
+    color: red;
+}
+
+a:active
+{
+    color: green;
+}
+
+nav#MainNav
+{
+    background-color: lightcyan;
+}
+
+.nav-item
+{
+    list-style-type:circle;
+    display: inline;
+    margin: 10px;
+    width: auto;
+}
+
+#myForm
+{
+    background-color: grey;
+    color: blanchedalmond;
+    padding: 50px;
+    margin: 10px
+}
+
+#myForm input[type = text]
+{
+    padding: 8px;
+    border: none;
+
+}
+
+.button
+{
+    padding: 8px;
+    border: none;
+    background-color: darkblue;
+    color: whitesmoke
+}
+
+table, th, td
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 15px
+}
