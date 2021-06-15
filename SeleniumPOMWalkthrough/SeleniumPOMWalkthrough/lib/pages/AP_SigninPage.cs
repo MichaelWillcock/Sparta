@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SeleniumPOMWalkthrough.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace SeleniumPOMWalkthrough.lib.pages
         private IWebElement _createButton => _seleniumDriver.FindElement(By.Id("SubmitCreate"));
         private IWebElement _signinAlert => _seleniumDriver.FindElement(By.ClassName("alert"));
         private IWebElement _createAlert => _seleniumDriver.FindElement(By.Id("create_account_error"));
+        private IWebElement _forgotPasswordLink => this._seleniumDriver.FindElement(By.LinkText("Forgot your password?"));
 
         public AP_SigninPage(IWebDriver seleniumDriver)
         {
@@ -35,5 +37,12 @@ namespace SeleniumPOMWalkthrough.lib.pages
         public void ClickCreate() => _createButton.Click();
         public string GetSignInAlertText() => _signinAlert.Text;
         public string GetCreateAlertTest() => _createAlert.Text;
+        public void ClickForgotPasswordLink() => _forgotPasswordLink.Click();
+
+        internal void InputSigninCredentials(Credentials credentials)
+        {
+            _emailSignInField.SendKeys(credentials.Email);
+            _passwordField.SendKeys(credentials.Password);
+        }
     }
 }
