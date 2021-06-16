@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
+    <Compile Include="FeatureFolder\AP_SigninJourneySteps.cs" />
     <Compile Include="FeatureFolder\AP_SigninSteps.cs" />
     <Compile Include="Utils\Credentials.cs" />
     <Compile Include="lib\AP_Website.cs" />
@@ -117,6 +118,7 @@
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="FeatureFolder\AP_Signin.feature" />
+    <None Include="FeatureFolder\AP_SigninJourney.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
